@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.LoginActivity">
+
+
+    <View
+        android:id="@+id/gradient_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/blue_gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/circle_image_View"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/while_cirlcle"
+        app:layout_constraintEnd_toEndOf="@id/gradient_background"
+        app:layout_constraintStart_toStartOf="@id/gradient_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/user_details_card_view"
+        />
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:src="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="@id/circle_image_View"
+        app:layout_constraintEnd_toEndOf="@id/circle_image_View"
+        app:layout_constraintStart_toStartOf="@id/circle_image_View"
+        app:layout_constraintTop_toTopOf="@id/circle_image_View" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/user_details_card_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="150dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/circle_image_View">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_layou"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/uname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                tools:text="rohitmanna" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_layou"
+            android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/upass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                tools:text="rohitmanna" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/login"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@id/register_text_view"
+        app:layout_constraintEnd_toEndOf="@id/user_details_card_view"
+        app:layout_constraintStart_toStartOf="@id/user_details_card_view"
+        app:layout_constraintTop_toTopOf="@id/user_details_card_view" />
+
+
+    <TextView
+        android:id="@+id/register_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="#3959FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/forgot_pass_tv"
+        app:layout_constraintTop_toBottomOf="@id/login" />
+
+
+    <TextView
+        android:id="@+id/forgot_pass_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:text="Forgot Password?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_text_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
